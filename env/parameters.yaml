@@ -1,0 +1,10 @@
+adminUser:
+  password: local:jenkins-demo-test1/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: bk200058@gmail.com
+  token: local:jenkins-demo-test1/pipelineUser:token
+  username: kameswarab
+prow:
+  hmacToken: local:jenkins-demo-test1/prow:hmacToken

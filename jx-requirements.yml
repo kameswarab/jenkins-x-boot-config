@@ -1,0 +1,81 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-config.git
+cluster:
+  clusterName: jenkins-demo-test1
+  devEnvApprovers:
+  - kameswarab
+  environmentGitOwner: kameswarab
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: rise-project-demo
+  provider: gke
+  registry: gcr.io
+  zone: us-east4-b
+environments:
+- ingress:
+    domain: 35.245.5.74.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-jenkins-demo-test1-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-jenkins-demo-test1-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-jenkins-demo-test1-production
+gitops: true
+ingress:
+  domain: 35.245.5.74.nip.io
+  externalDNS: false
+  namespaceSubDomain: -jx.
+  tls:
+    email: ""
+    enabled: false
+    production: false
+kaniko: true
+repository: nexus
+secretStorage: local
+storage:
+  backup:
+    enabled: false
+    url: ""
+  logs:
+    enabled: false
+    url: ""
+  reports:
+    enabled: false
+    url: ""
+  repository:
+    enabled: false
+    url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
+versionStream:
+  ref: v1.0.550
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
+webhook: lighthouse
